@@ -11,6 +11,7 @@ Then in your RemoteObject Service, we have a C# counterpart class called com.esr
 This means, you can create an instance of this class in your service and return the raw FeatureSet and your Flex application will atomatically serialize the Remote FeatureSet to the ESRI Flex counterpart. Pretty cool right?
 
 This is a sample of how I would convert an ArcObjects Polygon to the equivalent ESRI Flex counterpart.
+
 bc. ESRI.ArcGIS.Geometry.Polygon poly = (Polygon)m_geom; // Some previous polygon geometry retrieved using ArcObjects
 com.esri.ags.geometry.Polygon pg = new com.esri.ags.geometry.Polygon();
 pg.rings = new com.esri.ags.geometry.MapPoint[1][];
