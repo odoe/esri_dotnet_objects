@@ -12,7 +12,11 @@ This means, you can create an instance of this class in your service and return 
 
 This is a sample of how I would convert an ArcObjects Polygon to the equivalent ESRI Flex counterpart.
 
-bc. ESRI.ArcGIS.Geometry.Polygon poly = (Polygon)m_geom; // Some previous polygon geometry retrieved using ArcObjects
+bc. com.esri.ags.SpatialReference m_sr = new com.esri.ags.SpatialReference();
+m_sr.wkid = 102100;
+ESRI.ArcGIS.Geometry.Polygon poly = (Polygon)m_geom; // Some previous polygon geometry retrieved using ArcObjects
+int count = poly.PointCount;
+com.esri.ags.geometry.MapPoint[] mp = new com.esri.ags.geometry.MapPoint[count];
 com.esri.ags.geometry.Polygon pg = new com.esri.ags.geometry.Polygon();
 pg.rings = new com.esri.ags.geometry.MapPoint[1][];
 for (int i = 0; i < count; i++)
