@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace com.esri.ags
+﻿namespace com.esri.ags
 {
     public class SpatialReference
     {

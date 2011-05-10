@@ -1,7 +1,4 @@
-﻿using System;
-using com.esri.ags.geometry;
-
-namespace com.esri.ags.tasks
+﻿namespace com.esri.ags.tasks
 {
     public class FeatureSet
     {
