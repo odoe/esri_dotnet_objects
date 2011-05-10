@@ -28,6 +28,9 @@ pg.rings[0] = mp;
 
 So far, these are working for my current needs. Please feel free to use and update as needed.
 
+I have also included a helper class called net.odoe.geo.helpers.FeatureHelper.
+A sample of how to use the helper class can be found in sample.cs in this repo.
+
 For more information about the ESRI Flex API, please visit http://help.arcgis.com/en/webapi/flex/index.html
 
 h3. Disclaimer
