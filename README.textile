@@ -1,7 +1,7 @@
-h1. C# Objects for use with "ESRI Flex API":http://help.arcgis.com/en/webapi/flex/index.html.
+h1. C# Objects for use with "ArcGIS":http://resources.arcgis.com/en/home/.
 
 I thought there might be some interest in these, since I couldn't find any samples when I needed them.
-These are the basic ESRI Flex objects you would use in an ESRI Flex application that you can use in a Remote Object service of your choice.
+These are the basic ESRI objects you would use in a .NET application that can be served out to any web API. They are fully serializable with the ArcGIS "Flex API":http://help.arcgis.com/en/webapi/flex/index.html and most recently I have been using them in .NET MVC Web Services for the ArcGIS "JavaScript API":http://help.arcgis.com/en/webapi/javascript/arcgis/index.html.
 
 For example, in the ESRI Flex API, the class FeatureSet has a RemoteAlias defined.
 [RemoteClass(alias="com.esri.ags.FeatureSet")]
@@ -10,7 +10,7 @@ public class FeatureSet{...}
 Then in your RemoteObject Service, we have a C# counterpart class called com.esri.ags.FeatureSet.
 This means, you can create an instance of this class in your service and return the raw FeatureSet and your Flex application will atomatically serialize the Remote FeatureSet to the ESRI Flex counterpart. Pretty cool right?
 
-This is a sample of how I would convert an ArcObjects Polygon to the equivalent ESRI Flex counterpart.
+This is a sample of how I would convert an ArcObjects Polygon to the equivalent Serializable Object.
 
 bc. com.esri.ags.SpatialReference m_sr = new com.esri.ags.SpatialReference();
 m_sr.wkid = 102100;
@@ -31,11 +31,8 @@ So far, these are working for my current needs. Please feel free to use and upda
 I have also included a helper class called net.odoe.geo.helpers.FeatureHelper.
 A sample of how to use the helper class can be found in sample.cs in this repo.
 
-For more information about the ESRI Flex API, please visit http://help.arcgis.com/en/webapi/flex/index.html
 
 h3. Disclaimer
-Please visit the "ESRI Flex API dowload page":http://resources.arcgis.com/content/arcgis-flex-api-how-to-download
-
 I am not employed or affiliated with ESRI beyond being a user of their products.
 
 Enjoy.
