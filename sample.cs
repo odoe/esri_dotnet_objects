@@ -1,5 +1,7 @@
 // This is just a sample of how you can use the net.odoe.geo.helpers.FeatureHelper class
-// to turn your Features into ESRI Flex Compatible objects
+// to turn your Features into ESRICompatible objects
+// This can be a helper to a Controller in a .NET MVC Web Service
+// or a method deployed to WebORB for Flex Serialization
 public FeatureSet GetSampleMapPoint(string[] fieldValues)
 {
 	// initialize the license
