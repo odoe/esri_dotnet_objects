@@ -1,13 +1,12 @@
-﻿namespace com.esri.ags.geometry
+namespace com.esri.ags.geometry
 {
     public class Polygon : IGeometry
     {
         public Polygon() { }
-        public Polygon(MapPoint[][] rings)
+        public Polygon(double[][][,] rings)
         {
             this.rings = rings;
         }
-
-        public MapPoint[][] rings { get; set; }
+        public double[][][,] rings { get; set; }
     }
 }
